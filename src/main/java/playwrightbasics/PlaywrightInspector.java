@@ -1,4 +1,5 @@
 package playwrightbasics;
+
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.*;
 
@@ -12,18 +13,18 @@ public class PlaywrightInspector {
       page.navigate("https://naveenautomationlabs.com/opencart/index.php?route=account/login");
       page.getByRole(AriaRole.LINK, new Page.GetByRoleOptions().setName("Continue")).click();
       page.getByPlaceholder("First Name").click();
-      page.getByPlaceholder("First Name").fill("Test Fname");
+      page.getByPlaceholder("First Name").fill("Fname");
       page.getByPlaceholder("Last Name").click();
-      page.getByPlaceholder("Last Name").fill("Test Lname");
+      page.getByPlaceholder("Last Name").fill("Lname");
       page.getByPlaceholder("E-Mail").click();
-      page.getByPlaceholder("E-Mail").fill("TestPlaywright@gmail.com");
+      page.getByPlaceholder("E-Mail").fill("pwemail01@gmail.com");
       page.getByPlaceholder("Telephone").click();
-      page.getByPlaceholder("Telephone").fill("1234567890");
-      page.getByPlaceholder("Password").click();
-      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("TestPW");
+      page.getByPlaceholder("Telephone").fill("1234567899");
       page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).click();
+      page.getByPlaceholder("Password", new Page.GetByPlaceholderOptions().setExact(true)).fill("PWtest");
       page.getByPlaceholder("Password Confirm").click();
-      page.getByPlaceholder("Password Confirm").fill("TestPW");
+      page.getByPlaceholder("Password Confirm").fill("PWtest");
+      page.getByLabel("Yes").check();
       page.getByRole(AriaRole.CHECKBOX).check();
       page.getByRole(AriaRole.BUTTON, new Page.GetByRoleOptions().setName("Continue")).click();
       page.getByRole(AriaRole.HEADING, new Page.GetByRoleOptions().setName("Your Account Has Been Created!")).click();
