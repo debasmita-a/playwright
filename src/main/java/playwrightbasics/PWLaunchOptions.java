@@ -17,7 +17,7 @@ public class PWLaunchOptions {
 		lp.setChannel("chrome");
 		BrowserType browserType = playwright.chromium();
 		Browser browser = browserType.launch(lp);
-		Page page = browser.newPage();
+		Page page = browser.newPage(); //Creates a new page in a new browser context
 		page.navigate("https://google.com");
 
 	}
